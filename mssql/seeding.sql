@@ -1,3 +1,4 @@
+use master
 drop table Users
 drop table Companies
 
@@ -12,6 +13,8 @@ create table Users (
     FirstName VARCHAR(20),
     Company int REFERENCES Companies(CompanyId)
 )
+
+-- insert into Users values ('Bob', 1);
 
 select * from Users
 select * from Companies
