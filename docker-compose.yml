@@ -4,6 +4,7 @@ services:
     build: 
       context: ./remix
       dockerfile: Dockerfile
+    tty: true
     ports:
       - "3000:3000"
     volumes:
@@ -16,3 +17,7 @@ services:
       - MSSQL_SA_PASSWORD=NodePrismaApp2022!
     ports:
       - "1437:1433"
+  nginx:
+    image: 'nginx'
+    ports: 
+      - "8087:80"
